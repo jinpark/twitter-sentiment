@@ -1,0 +1,11 @@
+<h1>Tweets</h1>
+
+<ul id="tweets">
+  <%= render @tweets %>
+</ul>
+
+<%= form_for Tweet.new, remote: true do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :keyword %>
+  <%= f.submit "Send" %>
+<% end %>
